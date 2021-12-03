@@ -1,6 +1,7 @@
 file = open("input.txt")
+numDigits = len(file.readline().rstrip())
+file.seek(0)
 
-numDigits = 12
 lines = [line.rstrip() for line in file]
 options = ['1', '0']
 

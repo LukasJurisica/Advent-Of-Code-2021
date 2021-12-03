@@ -1,8 +1,11 @@
 file = open("input.txt")
+numDigits = len(file.readline().rstrip())
+file.seek(0)
 
-numDigits = 12
 count = [0] * numDigits
 total = 0
+
+file.seek(0)
 
 for line in file:
 	line = line.rstrip()
