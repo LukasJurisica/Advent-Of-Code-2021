@@ -5,8 +5,6 @@ file.seek(0)
 count = [0] * numDigits
 total = 0
 
-file.seek(0)
-
 for line in file:
 	line = line.rstrip()
 	for i in range(numDigits):
