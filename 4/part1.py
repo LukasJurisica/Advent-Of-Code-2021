@@ -14,21 +14,6 @@ def checkCol(board, index):
 		if (board[(i * 5) + index] != 'X'):
 			return False
 	return True
-
-def checkDiag(board):
-	retval = True
-	
-	for i in range(5):
-		if (board[(i * 5) + i] != 'X'):
-			retval = False
-			break
-			
-	for i in range(5):
-		if (board[(i * 5) + (4 - i)] != 'X'):
-			retval = False
-			break
-			
-	return retval
 		
 def findPuzzle():
 	for number in numbers:
@@ -36,7 +21,7 @@ def findPuzzle():
 			for x in range(25):
 				if (boards[i][x] == number):
 					boards[i][x] = 'X'
-					if (checkRow(boards[i], int(x / 5)) or checkCol(boards[i], x % 5) or checkDiag(boards[i])):
+					if (checkRow(boards[i], int(x / 5)) or checkCol(boards[i], x % 5)):
 						return [boards[i], int(number)]
 					break
 
