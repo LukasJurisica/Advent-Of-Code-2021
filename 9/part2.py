@@ -23,7 +23,9 @@ def dfs(x, y):
 basins = []
 for y in range(height):
 	for x in range(width):
-		basins.append(dfs(x, y))
+		s = dfs(x, y)
+		if (x != 0):
+			basins.append(s)
 
 basins.sort()
 print("The product of the 3 largest basins is", basins[-3] * basins[-2] * basins[-1])
