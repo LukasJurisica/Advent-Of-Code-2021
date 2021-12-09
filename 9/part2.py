@@ -24,7 +24,7 @@ basins = []
 for y in range(height):
 	for x in range(width):
 		s = dfs(x, y)
-		if (x != 0):
+		if (s != 0):
 			basins.append(s)
 
 basins.sort()
