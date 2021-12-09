@@ -5,4 +5,4 @@ median = sorted(numbers)[(len(numbers) + 1) // 2]
 fuelCost = sum([abs(n - median) for n in numbers])
 	
 print("It would take", fuelCost, "units of fuel to align the position")
-file.close
+file.close()

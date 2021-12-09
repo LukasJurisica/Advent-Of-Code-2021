@@ -8,4 +8,4 @@ mean = sum(numbers) // len(numbers)
 fuelCost = min([sum([fuel(abs(n - p)) for n in numbers]) for p in [mean, mean + 1]])
 	
 print("It would take", fuelCost, "units of fuel to align the position")
-file.close
+file.close()
