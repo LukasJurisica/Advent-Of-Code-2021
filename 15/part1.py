@@ -14,7 +14,7 @@ while (len(hq) > 0):
 		dist[y][x] = risk
 
 		if y + 1 == size and x + 1 == size:
-			print(risk - grid[0][0])
+			print("The lowest total risk of any path from the top left to the bottom right is: " + risk - grid[0][0])
 			break
 
 		for dx, dy in [[x, y-1], [x+1, y], [x, y+1], [x-1, y]]:
